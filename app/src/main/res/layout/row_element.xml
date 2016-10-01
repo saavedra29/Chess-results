@@ -2,33 +2,53 @@
 <android.support.v7.widget.GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_output_grid"
     app:rowCount="2"
     app:columnCount="3"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:background="@android:color/holo_green_light">
+    android:background="@android:color/holo_green_light"
+    app:orientation="horizontal">
 
-    <TextView android:layout_height="wrap_content"
-              android:layout_width="match_parent"
-              android:id="@+id/no_l"
-              tools:background="@android:color/holo_orange_light"/>
-    <TextView android:layout_height="wrap_content"
-              android:layout_width="match_parent"
-              app:layout_columnSpan="2"
-              android:id="@+id/tournament_l"
-              tools:background="@android:color/holo_orange_light"/>
-    <TextView android:layout_height="wrap_content"
-              android:layout_width="match_parent"
-              android:id="@+id/code_l"
-              tools:background="@android:color/holo_orange_light"/>
-    <TextView android:layout_height="wrap_content"
-              android:layout_width="match_parent"
-              android:id="@+id/flag_l"
-              tools:background="@android:color/holo_orange_light"/>
-    <TextView android:layout_height="wrap_content"
-              android:layout_width="match_parent"
-              android:id="@+id/update_l"
-              tools:background="@android:color/holo_orange_light"/>
+    <TextView
+        android:id="@+id/no_l"
+        android:background="@android:color/holo_orange_light"
+        app:layout_gravity="fill_horizontal"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1">
+
+    </TextView>
+    <TextView
+        app:layout_columnSpan="2"
+        android:id="@+id/tournament_l"
+        android:background="@android:color/holo_orange_light"
+        app:layout_gravity="fill_horizontal"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1">
+
+    </TextView>
+    <TextView
+        android:id="@+id/code_l"
+        android:background="@android:color/holo_orange_light"
+        app:layout_gravity="fill_horizontal"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1">
+
+    </TextView>
+    <TextView
+        android:id="@+id/flag_l"
+        android:background="@android:color/holo_orange_light"
+        app:layout_gravity="fill_horizontal"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1">
+
+    </TextView>
+    <TextView
+        android:id="@+id/update_l"
+        android:background="@android:color/holo_orange_light"
+        app:layout_gravity="fill_horizontal"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1">
+
+    </TextView>
 </android.support.v7.widget.GridLayout>

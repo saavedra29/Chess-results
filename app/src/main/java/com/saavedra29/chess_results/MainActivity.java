@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayout;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -80,17 +81,9 @@ public class MainActivity extends AppCompatActivity
         {
             super.onPostExecute(aVoid);
 
-            GridLayout output = (GridLayout)findViewById(R.id.main_output);
+            LinearLayout output = (LinearLayout) findViewById(R.id.main_output);
             for (TableEntry entry: tables)
             {
-                /*
-                TextView no = new TextView(MainActivity.this);
-                TextView tour = new TextView(MainActivity.this);
-                TextView link = new TextView(MainActivity.this);
-                TextView country = new TextView(MainActivity.this);
-                TextView update = new TextView(MainActivity.this);
-                */
-
                 View rowGrid = LayoutInflater.from(MainActivity.this).
                         inflate(R.layout.row_element, null);
                 TextView no = (TextView)rowGrid.findViewById(R.id.no_l);
@@ -106,22 +99,6 @@ public class MainActivity extends AppCompatActivity
                 output.addView(rowGrid);
 
             }
-
-            /*
-            for (TableEntry entry: tables)
-            {
-                String tmp = "";
-                tmp = tmp + "NO: " + Integer.toString(entry.no) + "\n";
-                tmp = tmp + "Tournament: " + entry.tournament + "\n";
-                tmp = tmp + "Link: " + entry.link + "\n";
-                tmp = tmp + "Country: " + entry.countryCode + "\n";
-                tmp = tmp + "Last Update: " + entry.lastUpdate + "\n";
-                tmp = tmp + "Image Path: " + entry.imagePath + "\n";
-                tmp += "------------------------------------\n";
-                output += tmp;
-            }
-            v.setText(output);
-            */
         }
 
     }
