@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chess-results</string>
+    <string name="spinner1_title">Tournament selection</string>
+    <string name="spinner2_title">Sort according to</string>
+</resources>
