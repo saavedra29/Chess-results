@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayout;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.io.IOException;
@@ -92,10 +93,11 @@ public class MainActivity extends AppCompatActivity
                 tour.setText(entry.tournament);
                 TextView link = (TextView)rowGrid.findViewById(R.id.code_l);
                 link.setText(entry.countryCode);
-                TextView flag = (TextView)rowGrid.findViewById(R.id.flag_l);
-                flag.setText(entry.link);
+                ImageView flag = (ImageView)rowGrid.findViewById(R.id.flag_l);
+                flag.setImageResource(getResources().getIdentifier(
+                        "tn_" + entry.countryCode.toLowerCase(), "drawable", getPackageName()));
                 TextView update = (TextView)rowGrid.findViewById(R.id.update_l);
-                update.setText(entry.lastUpdate);
+                update.setText(entry.lastUpdate + " ago");
                 output.addView(rowGrid);
 
             }
