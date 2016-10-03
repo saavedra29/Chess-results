@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
                 View rowGrid = LayoutInflater.from(MainActivity.this).
                         inflate(R.layout.row_element, null);
                 TextView no = (TextView)rowGrid.findViewById(R.id.no_l);
-                no.setText(Integer.toString(entry.no));
+                no.setText(Integer.toString(entry.no + 1));
                 TextView tour = (TextView)rowGrid.findViewById(R.id.tournament_l);
                 tour.setText(entry.tournament);
                 TextView link = (TextView)rowGrid.findViewById(R.id.code_l);

@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.GridLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_output_grid"
-    app:rowCount="2"
-    app:columnCount="3"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/firstRow"
+        android:background="@android:color/holo_red_dark"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/no_l"
+            android:background="@android:color/holo_orange_light"
+            android:layout_height="wrap_content"
+            android:layout_width="30dp"/>
+        <TextView
+            android:id="@+id/tournament_l"
+            android:background="@android:color/holo_orange_light"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:background="@android:color/holo_green_light"
-    app:orientation="horizontal">
+    android:layout_below="@id/firstRow"
+    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/no_l"
-        android:background="@android:color/holo_orange_light"
-        app:layout_gravity="fill_horizontal"
-        android:layout_height="wrap_content"
-        app:layout_columnWeight="1">
-
-    </TextView>
-    <TextView
-        app:layout_columnSpan="2"
-        android:id="@+id/tournament_l"
-        android:background="@android:color/holo_orange_light"
-        app:layout_gravity="fill_horizontal"
-        android:layout_height="wrap_content"
-        app:layout_columnWeight="1">
-
-    </TextView>
     <TextView
         android:id="@+id/code_l"
         android:background="@android:color/holo_orange_light"
-        app:layout_gravity="fill_horizontal"
         android:layout_height="wrap_content"
-        app:layout_columnWeight="1">
-
-    </TextView>
+        android:layout_width="50dp" />
     <TextView
         android:id="@+id/flag_l"
         android:background="@android:color/holo_orange_light"
-        app:layout_gravity="fill_horizontal"
         android:layout_height="wrap_content"
-        app:layout_columnWeight="1">
-
-    </TextView>
+        android:layout_width="150dp" />
     <TextView
         android:id="@+id/update_l"
         android:background="@android:color/holo_orange_light"
-        app:layout_gravity="fill_horizontal"
         android:layout_height="wrap_content"
-        app:layout_columnWeight="1">
+        android:layout_width="match_parent" />
+    </LinearLayout>
 
-    </TextView>
-</android.support.v7.widget.GridLayout>
+</RelativeLayout>
